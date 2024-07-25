@@ -14,26 +14,32 @@ function StartScroll(element,xSpeed,ySpeed) {
 }
 
 function StopScroll(element,interval,id) {
-
     console.log(`Stop Scrolling Interval Requested, Searching Scrolling Intervals\n${JSON.stringify(scrollingIntervals)}`)
-
     var _scrollingIntervals = []; // a placeholder object to hold all non-stopped scrolling intervals
     var stoppedInterval = undefined; // a placeholder variable to hold the stopped scrolling interval once found
-
     for(let a = 0; a < scrollingIntervals.length; a++) { // loops through all the scrolling intervals to compare data
-
         console.log(scrollingIntervals[a]);
         if(id == scrollingIntervals[a].id || interval == scrollingIntervals[a].interval || element == scrollingIntervals[a].element) {
             console.log(`Matching Interval Found:\n${JSON.stringify(scrollingIntervals[a])}`)
             stoppedInterval = scrollingIntervals[a].interval;
             break;
         } // checks if the current interval matches any of the parameters to stop
-
         _scrollingIntervals.push(scrollingIntervals[a]);
     }
-
     scrollingIntervals = _scrollingIntervals; // sets the scrolling background array to new one without stopped arrays
     if(stoppedInterval) clearInterval(stoppedInterval); // clears the interval of the one meant to be stopped if its found
+}
+
+function StopAllScroll() {
+    console.log(`Stop All Scrolling Interval Requested\n${JSON.stringify(scrollingIntervals)}`);
+    for(let a = 0; a < scrollingIntervals.length; a++) { // loops through all the scrolling intervals to compare data
+        console.log(scrollingIntervals[a]);
+        if(id == scrollingIntervals[a].id || interval == scrollingIntervals[a].interval || element == scrollingIntervals[a].element) {
+            console.log(`Clearing:\n${JSON.stringify(scrollingIntervals[a])}`)
+            clearInterval(scrollingIntervals[a].interval);
+        } // clears the current interval no matter what
+    } // loops through all scrolling intervals
+    scrollingIntervals = []; // clears all the intervals stored
 }
 
 function Scroll(element,xSpeed,ySpeed) {
