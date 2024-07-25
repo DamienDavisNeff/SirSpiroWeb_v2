@@ -16,7 +16,13 @@
         
     </div>
     <script defer>
-        window.onload = () => {
+        window.onload = RestartScroll();
+        window.addEventListener("resize", () => { RestartScroll(); });
+        window.addEventListener("orientationchange", () => { RestartScroll(); } );
+
+        function RestartScroll() {
+            console.log("Page Loaded, Resized, or Orientation Changed");
+            StopScroll(document.getElementById("content"));
             if(IsPortrait()) return StartScroll(document.getElementById("content"),0,1);
             StartScroll(document.getElementById("content"),1,0);
         }
