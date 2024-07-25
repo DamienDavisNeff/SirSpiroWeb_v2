@@ -3,9 +3,31 @@
 }
 
 body { margin: -10%; overflow: hidden; }
+
+/* 
 div#content {
+    padding: 20%;
     width: 100%;
     height: 100%;
     background-image: url("/images/banner/tile.jpg");
     filter: blur(5px);
+}
+*/
+
+div#content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+}
+div#content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/banner/tile.jpg");
+    filter: blur(5px);
+    z-index: -1;
 }
