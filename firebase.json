@@ -1,0 +1,42 @@
+{
+    "hosting": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "webhook_url.txt",
+        "webhook_author.txt",
+        "webhook_image.txt",
+        "webhook_description.txt",
+        "webhook_title.txt",
+        "**/.firebase/*",
+        "**/.git/*"
+      ],
+      "cleanUrls":true,
+      "trailingSlash":false,
+      "headers": [
+        {
+          "source": "**/*",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "error_pages":[
+      {"code":400,"path":"/error/400.html"},
+      {"code":401,"path":"/error/401.html"},
+      {"code":403,"path":"/error/403.html"},
+      {"code":404,"path":"/error/404.html"},
+      {"code":451,"path":"/error/451.html"},
+      {"code":500,"path":"/error/500.html"},
+      {"code":502,"path":"/error/502.html"},
+      {"code":503,"path":"/error/503.html"},
+      {"code":504,"path":"/error/504.html"},
+      {"code":505,"path":"/error/505.html"}
+    ]
+  }
