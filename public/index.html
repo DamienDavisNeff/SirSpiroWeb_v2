@@ -8,12 +8,18 @@
     <!-- -->
     <link rel="stylesheet" href="/css/index.css">
     <!-- -->
+    <script src="/scripts/global.js"></script>
     <script src="/scripts/scrolling-background.js"></script>
 </head>
 <body>
     <div id="content">
-
+        
     </div>
-    <script defer>StartScroll(document.getElementById("content"),1,0)</script>
+    <script defer>
+        window.onload = () => {
+            if(IsPortrait()) return StartScroll(document.getElementById("content"),0,1);
+            StartScroll(document.getElementById("content"),1,0);
+        }
+    </script>
 </body>
 </html>
