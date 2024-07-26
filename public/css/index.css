@@ -26,5 +26,42 @@ div#main {
     z-index: 1;
     width: auto;
     height: auto;
-    border: 5px solid red;
+}
+
+/* */
+
+.social-title-area {
+    display: flex;
+    align-items: flex-start;
+}
+.social-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-header {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 15vw;
+    max-height: 15vh;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
+button.social {
+    width: 100%;
+}
+
+/* */
+@media (orientation: landscape) {
+    div#main {
+        max-width: 33%;
+        text-align: left;
+    }
+}
+@media (orientation: portrait) {
+    div#main {
+        max-width: 75%;
+        text-align: center;
+    }
 }
