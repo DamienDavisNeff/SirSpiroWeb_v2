@@ -2,32 +2,29 @@
     transition-duration: 250ms;
 }
 
-body { margin: -10%; overflow: hidden; }
-
-/* 
-div#content {
-    padding: 20%;
-    width: 100%;
-    height: 100%;
-    background-image: url("/images/banner/tile.jpg");
-    filter: blur(5px);
-}
-*/
+body { margin: -1%; overflow: hidden; }
 
 div#content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
-div#content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+div#background {
+    width: 110vw;
+    height: 110vh;
     background-image: url("/images/banner/tile.jpg");
     filter: blur(5px);
+    position: fixed;
     z-index: -1;
+}
+
+div#main {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border: 5px solid red;
 }

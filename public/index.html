@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="content">
+        <div id="background"></div>
         <div id="main">
             <div>
                 <!-- Title Area -->
@@ -66,9 +67,9 @@
 
         function RestartScroll() {
             console.log("Page Loaded, Resized, or Orientation Changed");
-            StopScroll(document.getElementById("content"));
-            if(IsPortrait()) return StartScroll(document.getElementById("content"),0,1);
-            StartScroll(document.getElementById("content"),1,0);
+            StopScroll(document.getElementById("background"));
+            if(IsPortrait()) return StartScroll(document.getElementById("background"),0,1);
+            StartScroll(document.getElementById("background"),1,0);
         }
     </script>
 </body>
