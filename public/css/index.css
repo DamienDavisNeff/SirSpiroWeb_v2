@@ -1,10 +1,14 @@
 * {
     transition-duration: 250ms;
+    font-family: sans-serif;
 }
 
-body { margin: -1%; overflow: hidden; }
+body { 
+    margin: 0; 
+    overflow: hidden; 
+}
 
-div#content {
+#content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +16,7 @@ div#content {
     height: 100vh;
 }
 
-div#background {
+#background {
     width: 110vw;
     height: 110vh;
     background-image: url("/images/banner/tile.jpg");
@@ -21,47 +25,127 @@ div#background {
     z-index: -1;
 }
 
-div#main {
+#main {
     position: absolute;
     z-index: 1;
     width: auto;
     height: auto;
-}
-
-/* */
-
-.social-title-area {
-    display: flex;
-    align-items: flex-start;
-}
-.social-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-header {
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 15vw;
-    max-height: 15vh;
-    aspect-ratio: 1/1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
 }
 
-button.social {
-    width: 100%;
+/* Title Area */
+.social-title-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* */
+.logo-header {
+    width: 15vw;
+    max-width: 120px;
+    border-radius: 15px;
+}
+
+.name-area {
+    display: flex;
+}
+.name-header {
+    margin: 0;
+    font-size: 2em;
+}
+.verified-badge {
+    height: 1rem;
+    vertical-align: middle;
+    margin: 0.5rem;
+}
+
+.description-header {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button.contact {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.contact:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Social Buttons */
+button.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.social span {
+    margin-left: 10px;
+}
+
 @media (orientation: landscape) {
-    div#main {
-        max-width: 33%;
+    #main {
+        min-width: 33%;
+        max-width: 66%;
         text-align: left;
     }
+    *[type="mobile"] {
+        display: none;
+    }
 }
+
 @media (orientation: portrait) {
-    div#main {
+    #main {
         max-width: 75%;
         text-align: center;
+    }
+    .logo-header {
+        width: fit-content;
+    }
+    .social-title-area {
+        flex-direction: column;
+    }
+    .social-icons {
+        margin-top: -3px;
+    }
+    *[type="desktop"] {
+        display: none;
+    }
+    *:disabled {
+        display: none;
     }
 }

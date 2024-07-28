@@ -10,6 +10,8 @@
     <!-- -->
     <script src="/scripts/global.js"></script>
     <script src="/scripts/scrolling-background.js"></script>
+    <!-- ADOBE FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/mvm1xjb.css">
 </head>
 <body>
     <div id="content">
@@ -20,47 +22,48 @@
                     <!-- Title Area -->
                     <img class="logo-header" src="/images/logo/Normal.jpg" alt="SirSpiro">
                     <div class="social-content">
-                        <span>
+                        <span type="desktop" class="name-area">
                             <h1 class="name-header">SirSpiro</h1>
-                            <!-- SVG Verified Badge -->
+                            <img class="verified-badge" src="/images/social/Verfied.png" hidden>
                         </span>
-                        <p class="description-header">The most talented gamer of all time, occasionally funny.</p>
+                        <p class="description-header" type="desktop">The most talented gamer of all time, occasionally funny.</p>
                         <span class="social-icons">
-                            <!-- SVG YT -->
-                            <!-- SVG X -->
-                            <!-- SVG TTV -->
-                            <!-- SVG DIS -->
+                            <a href=""><img class="social-icon" src="/images/social/YouTube.png" onclick="GoTo(`https://sirspi.ro/yt`)"></a>
+                            <img class="social-icon" src="/images/social/Twitter.png" onclick="GoTo(`https://sirspi.ro/x`)">
+                            <img class="social-icon" src="/images/social/Twitch.png" onclick="GoTo(`https://sirspi.ro/ttv`)">
+                            <img class="social-icon" src="/images/social/Discord.png" onclick="GoTo(`https://sirspi.ro/discord`)">
+                            <img class="social-icon" src="/images/social/TikTok.png" onclick="GoTo(`https://sirspi.ro/tiktok`)">
+                            <img class="social-icon" src="/images/social/Instagram.png" onclick="GoTo(`https://sirspi.ro/ig`)">
                         </span>
                     </div>
                 </div>
                 <span class="contact-buttons">
-                    <button class="contact">Contact</button>
-                    <button class="contact"><!-- Disabled -->Media</button>
+                    <button class="contact" onclick="GoTo(`mailto:me@sirspiro.com`)">Contact</button>
+                    <button class="contact" disabled>Media</button>
                 </span>
             </div>
             <div>
-                <!-- YT -->
-                <button class="social"><span>YouTube</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/yt`)"><span>YouTube</span></button>
             </div>
             <div>
                 <!-- X / Twitter -->
-                <button class="social"><span>Twitter (Never Known as X)</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/x`)"><span>Twitter (Never Known as X)</span></button>
             </div>
             <div>
                 <!-- Twitch -->
-                <button class="social"><span>Twitch</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/ttv`)"><span>Twitch</span></button>
             </div>
             <div>
                 <!-- Discord -->
-                <button class="social"><span>Discord</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/discord`)"><span>Discord</span></button>
             </div>
             <div>
                 <!-- TikTok -->
-                <button class="social"><span>TikTok</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/tiktok`)"><span>TikTok</span></button>
             </div>
             <div>
                 <!-- Instagram -->
-                <button class="social"><span>Instagram</span></button>
+                <button class="social" onclick="GoTo(`https://sirspi.ro/ig`)"><span>Instagram</span></button>
             </div>
         </div>
     </div>
@@ -76,5 +79,6 @@
             StartScroll(document.getElementById("background"),1,0);
         }
     </script>
+    <script src="" defer></script>
 </body>
 </html>,
