@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>69 · Error Template · SirSpiro</title>
+    <title>404 · Not Found · SirSpiro</title>
     <!-- ADOBE FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/mvm1xjb.css">
     <!-- -->
@@ -74,6 +74,14 @@
             margin: 5px 0;
             font-size: 1.2em;
         }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            border: 1px solid #e1e1e1;
+            border-radius: 3px;
+            padding: 2px 4px;
+            color: #000000;
+        }
 
         /* Contact Buttons */
         .contact-buttons {
@@ -143,11 +151,10 @@
                     " alt="SirSpiro Logo Broken">
                     <div class="social-content">
                         <span type="desktop" class="name-area">
-                            <h1 class="name-header">69</h1>
-                            <img class="verified-badge" src="/images/social/Verfied.png" hidden>
+                            <h1 class="name-header">404</h1>
                         </span>
-                        <p type="desktop" class="description-header">There was a problem loading this error template</p>
-                        <p type="mobile" class="description-header"><b>69</b>: There was a problem loading this error template<br></p>
+                        <p type="desktop" class="description-header">The requested page <code class="404-replace">/page</code> was not found.<br>But I'll look harder next time.</p>
+                        <p type="mobile" class="description-header"><b>404</b>: The requested page <code class="404-replace">/page</code> was not found.</p>
                     </div>
                 </div>
                 <span class="contact-buttons">
@@ -157,6 +164,13 @@
             </div>
         </div>
     </div>
+    <!-- Replace /page Code -->
+    <script defer>
+        const elements = document.getElementsByClassName("404-replace");
+        for(let a = 0; a < elements.length; a++) {
+            elements[a].innerHTML = location.pathname;
+        }
+    </script>
     <!-- Global Code -->
     <script>
         function IsPortrait() {
