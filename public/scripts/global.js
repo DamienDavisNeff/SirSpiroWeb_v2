@@ -2,6 +2,7 @@ function IsPortrait() {
     if(window.innerHeight > window.innerWidth) return true;
 }
 
-function GoTo(url) {
-    window.open(url,'_blank');
+function GoTo(url,target) {
+    if(target === undefined) target = "_blank";
+    window.open(url,target);
 }
